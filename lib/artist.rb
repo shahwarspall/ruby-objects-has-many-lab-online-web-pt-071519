@@ -12,6 +12,9 @@ attr_reader :song
  
 def add_song(song)
     @all << song
+
+    
+
     song.artist = self
   end
 
@@ -19,6 +22,8 @@ def add_song(song)
     song = Song.new(song_name)
     song.artist = self
     @all << song_name
+    
+
   end 
 
   def songs
