@@ -1,7 +1,7 @@
 class Author 
   attr_accessor :name 
-
-
+attr_reader :post
+@@every
 def initialize(name)
   @name = name 
   @all = []
@@ -9,6 +9,7 @@ end
 
 
 def posts
+  @all
     Post.all.select do |post|
       post.author == self
     end
@@ -16,6 +17,7 @@ def posts
   
   def add_post(post)
     @all << post
+  
     post.author = self 
   end 
     
@@ -25,7 +27,8 @@ def posts
       @all << post_title
       
     end 
+    
     def self.post_count
-      Post.count.all
+      Post.all.count
     end 
 end
