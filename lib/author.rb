@@ -1,7 +1,9 @@
 class Author 
   attr_accessor :name 
 attr_reader :post
+
 @@every
+
 def initialize(name)
   @name = name 
   @all = []
